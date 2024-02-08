@@ -1,0 +1,21 @@
+.greetings {
+    margin-bottom: 77px;
+
+    h1 {
+        font-size: 48px;
+        line-height: 24px;
+        font-weight: 700;
+        margin: 0;
+        margin-bottom: 41px;
+
+        span {
+            color: var(--color-primary);
+            font-weight: 700;
+        }
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: 400;
+    }
+}

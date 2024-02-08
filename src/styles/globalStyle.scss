@@ -37,12 +37,21 @@
 }
 
 #root {
+    width: 100%;
+    position: relative;
     display: flex;
     flex-direction: column;
+    height: 5000px;
 }
 
 body {
     overflow-y: scroll;
+}
+
+main {
+    margin-top: 91px;
+    margin-left: 117px;
+    padding: 68px 90px 0 107px;
 }
 
 a {

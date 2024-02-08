@@ -1,6 +1,13 @@
 //Imports
+import Greetings from "../../components/dashboard/Greetings";
+import Statistics from "../../components/dashboard/Statistics";
 
 //Exports
 export default function HomePage() {
-    return <main>Tableau de bord</main>;
+    return (
+        <main>
+            <Greetings />
+            <Statistics />
+        </main>
+    );
 }
