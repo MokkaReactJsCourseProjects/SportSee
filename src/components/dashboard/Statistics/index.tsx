@@ -1,25 +1,22 @@
 //Imports
 import { XAxis, Tooltip, YAxis, Legend, Bar, BarChart } from "recharts";
-import styles from "./style.module.scss";
-import {
-    performance,
-    user,
-    averageSessions,
-    activity,
-} from "../../../data/mocks";
 import KeyData from "./KeyData";
+import { User } from "../../../types/user";
+import styles from "./style.module.scss";
+
+//Types
+interface StatisticsProps {
+    user: User;
+}
 
 //Exports
-export default function Statistics() {
-    // console.log("-----------");
-    // console.log(user.data.keyData);
-    // console.log(performance.data);
-    // console.log(averageSessions.data);
-    // console.log(activity.data);
-
+export default function Statistics({ user }: StatisticsProps) {
     return (
-        <div>
-            <KeyData />
+        <div className={styles.container}>
+            <div>
+                <div></div>
+            </div>
+            <KeyData keyData={user.keyData} />
         </div>
     );
     return (

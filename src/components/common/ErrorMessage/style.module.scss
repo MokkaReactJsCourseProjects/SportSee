@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.oops {
+    font-weight: 700;
+    font-size: 64px;
+    color: var(--color-primary);
+}
+
+.error {
+    font-weight: 700;
+    font-size: 24px;
+}

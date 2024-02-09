@@ -11,7 +11,7 @@ export default function App() {
             <Header />
             <SideNav />
             <Routes>
-                <Route index element={<HomePage />} />
+                <Route path="/:id" element={<HomePage />} />
             </Routes>
         </>
     );
