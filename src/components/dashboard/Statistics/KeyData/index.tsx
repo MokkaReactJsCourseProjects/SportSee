@@ -2,6 +2,7 @@
 import images from "../../../../assets/images";
 import { UserKeyData } from "../../../../types/user";
 import DataCard from "./DataCard";
+import styles from "./style.module.scss";
 
 //Types
 interface KeyDataProps {
@@ -11,7 +12,7 @@ interface KeyDataProps {
 //Exports
 export default function KeyData({ keyData }: KeyDataProps) {
     return (
-        <div>
+        <div className={styles.container}>
             <DataCard
                 icon={images.energy}
                 colorHex="#ff0000"

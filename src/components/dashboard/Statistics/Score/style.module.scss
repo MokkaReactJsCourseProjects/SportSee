@@ -1,0 +1,51 @@
+.container {
+    background-color: var(--color-ltgray);
+    position: relative;
+    flex: 1;
+    height: 263px;
+    display: flex;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px 0px #00000005;
+}
+
+.chart {
+    background-color: white;
+    border-radius: 999px;
+    box-shadow: 0px 2px 4px 0px #00000005;
+    margin: auto;
+    svg {
+        overflow: visible;
+    }
+}
+
+.statName {
+    position: absolute;
+    top: 24px;
+    left: 30px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.statValue {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+        position: relative;
+        top: 15px;
+        width: 95px;
+        text-align: center;
+        line-height: 26px;
+        font-weight: 500;
+        font-size: 16px;
+        color: var(--color-gray);
+        em {
+            font-weight: 700;
+            font-size: 26px;
+            font-style: normal;
+            color: var(--color-dkgray);
+        }
+    }
+}
