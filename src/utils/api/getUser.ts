@@ -23,9 +23,11 @@ export default async function getUser(userId: Id): Promise<User> {
     try {
         if (import.meta.env.VITE_USE_MOCKED_API === "true") {
             apiUser = userMock.data;
-            apiActivity = activityMock.data;
-            apiAverageSessions = averageSessionsMock.data;
-            apiPerformance = performanceMock.data;
+            if (userId === apiUser.id) {
+                apiActivity = activityMock.data;
+                apiAverageSessions = averageSessionsMock.data;
+                apiPerformance = performanceMock.data;
+            }
         } else {
             apiUser = (
                 await (
@@ -51,14 +53,14 @@ export default async function getUser(userId: Id): Promise<User> {
                     )
                 ).json()
             ).data;
-            if (
-                !apiUser ||
-                !apiActivity ||
-                !apiAverageSessions ||
-                !apiPerformance
-            ) {
-                throw new Error(`No user found with Id=${userId}`);
-            }
+        }
+        if (
+            !apiUser ||
+            !apiActivity ||
+            !apiAverageSessions ||
+            !apiPerformance
+        ) {
+            throw new Error(`No user found with Id=${userId}`);
         }
         return new User(
             apiUser,

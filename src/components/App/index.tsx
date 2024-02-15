@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import { HomePage } from "../../pages";
 import Header from "../Header";
 import SideNav from "../SideNav";
+import NotFoundPage from "../../pages/NotFoundPage";
 
 //Exports
 export default function App() {
@@ -11,7 +12,8 @@ export default function App() {
             <Header />
             <SideNav />
             <Routes>
-                <Route path="/:id" element={<HomePage />} />
+                <Route path="/user/:id" element={<HomePage />} />
+                <Route path="/*" element={<NotFoundPage />} />
             </Routes>
         </>
     );
