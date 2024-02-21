@@ -23,18 +23,6 @@ export default function AverageSessions({ user }: AverageSessionsProps) {
 
     return (
         <div className={styles.container}>
-            <p className={styles.title}>Durée moyenne des sessions</p>
-            <ul className={styles.days}>
-                {data.map((session, index) => {
-                    if (index > 0) {
-                        return (
-                            <li key={index}>
-                                {getFirstLetterOfDay(session.date)}
-                            </li>
-                        );
-                    }
-                })}
-            </ul>
             <ResponsiveContainer
                 width="100%"
                 height="100%"
@@ -78,6 +66,18 @@ export default function AverageSessions({ user }: AverageSessionsProps) {
                     />
                 </LineChart>
             </ResponsiveContainer>
+            <p className={styles.title}>Durée moyenne des sessions</p>
+            <ul className={styles.days}>
+                {data.map((session, index) => {
+                    if (index > 0) {
+                        return (
+                            <li key={index}>
+                                {getFirstLetterOfDay(session.date)}
+                            </li>
+                        );
+                    }
+                })}
+            </ul>
         </div>
     );
 }

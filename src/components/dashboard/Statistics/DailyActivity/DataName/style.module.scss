@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icon {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    display: flex;
+}
+
+.name {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-gray);
+}
