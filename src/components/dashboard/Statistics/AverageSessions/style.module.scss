@@ -1,0 +1,45 @@
+.container {
+    position: relative;
+    display: flex;
+    background-color: var(--color-primary);
+    flex: 1;
+    height: 263px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+    border-radius: 5px;
+}
+
+.title {
+    position: absolute;
+    top: 29px;
+    left: 34px;
+    width: 147px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 24px;
+    color: white;
+    opacity: 0.5;
+}
+
+.tooltip {
+    background-color: white;
+    font-size: 8px;
+    font-weight: 500;
+    padding: 7px;
+}
+
+.days {
+    position: absolute;
+    display: flex;
+    left: 14px;
+    right: 14px;
+    bottom: 16px;
+    justify-content: space-between;
+    align-items: center;
+
+    li {
+        font-size: 12px;
+        font-weight: 500;
+        color: white;
+        opacity: 0.5;
+    }
+}

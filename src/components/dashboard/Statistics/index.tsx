@@ -4,6 +4,7 @@ import { User } from "../../../types/user";
 import styles from "./style.module.scss";
 import Score from "./Score";
 import DailyActivity from "./DailyActivity";
+import AverageSessions from "./AverageSessions";
 
 //Types
 interface StatisticsProps {
@@ -17,7 +18,7 @@ export default function Statistics({ user }: StatisticsProps) {
             <div className={styles.secondContainer}>
                 <DailyActivity user={user} />
                 <div className={styles.thirdContainer}>
-                    <Score user={user} />
+                    <AverageSessions user={user} />
                     <Score user={user} />
                     <Score user={user} />
                 </div>
