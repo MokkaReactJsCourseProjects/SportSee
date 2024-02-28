@@ -29,7 +29,8 @@ interface ApiPerformanceKindValue {
 export interface ApiUser {
     id: Id;
     keyData: UserKeyData;
-    todayScore: number;
+    todayScore?: number;
+    score?: number;
     userInfos: ApiUserInfos;
 }
 

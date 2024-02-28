@@ -29,7 +29,7 @@ export class User {
         this.firstName = apiUser.userInfos.firstName;
         this.lastName = apiUser.userInfos.lastName;
         this.age = apiUser.userInfos.age;
-        this.todayScore = apiUser.todayScore;
+        this.todayScore = apiUser.todayScore || apiUser.score;
         this.keyData = apiUser.keyData;
         this.sessions = apiActivity.sessions.map((activitySession, i) => {
             return {
