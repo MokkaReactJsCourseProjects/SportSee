@@ -29,6 +29,8 @@
 }
 
 .tooltip {
+    position: relative;
+    left: 7px;
     background-color: var(--color-dkprimary);
     display: flex;
     flex-direction: column;
@@ -37,7 +39,7 @@
 
     p {
         text-align: center;
-        font-size: 7px;
+        font-size: 10px;
         font-weight: 500;
         color: white;
     }

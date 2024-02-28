@@ -7,7 +7,7 @@ import styles from "./style.module.scss";
 interface DataCardProps {
     icon: Image;
     colorHex: string;
-    value: number;
+    value: number | string;
     unit: string;
     unitName: string;
 }
@@ -33,7 +33,7 @@ export default function DataCard({
                     {value}
                     {unit}
                 </p>
-                <p>{unitName}</p>
+                <p className={styles.unitName}>{unitName}</p>
             </div>
         </div>
     );

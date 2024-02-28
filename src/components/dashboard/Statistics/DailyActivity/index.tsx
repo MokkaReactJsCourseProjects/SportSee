@@ -45,7 +45,7 @@ export default function DailyActivity({ user }: DailyActivityProps) {
             <ResponsiveContainer width={"100%"} height={"100%"}>
                 <BarChart
                     data={data}
-                    margin={{ top: 112, right: 43, left: 43, bottom: 43 }}
+                    margin={{ top: 112, right: 43, left: 43, bottom: 24 }}
                     barGap={8}
                 >
                     <CartesianGrid strokeDasharray="3 3" vertical={false} />
@@ -61,11 +61,13 @@ export default function DailyActivity({ user }: DailyActivityProps) {
                         orientation="right"
                         axisLine={false}
                         tickLine={false}
-                        tickMargin={43}
+                        tickMargin={40}
                         tickCount={3}
+                        tick={{ fill: "#9B9EAC" }}
                     />
                     <Tooltip
                         content={renderTooltip}
+                        isAnimationActive={false}
                         cursor={{ fill: "#C4C4C488" }}
                     />
                     <Bar

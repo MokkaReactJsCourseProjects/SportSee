@@ -16,7 +16,9 @@ export default function KeyData({ keyData }: KeyDataProps) {
             <DataCard
                 icon={images.energy}
                 colorHex="#ff0000"
-                value={keyData.calorieCount}
+                value={(keyData.calorieCount / 1000)
+                    .toFixed(3)
+                    .replace(".", ",")}
                 unit="kCal"
                 unitName="Calories"
             />

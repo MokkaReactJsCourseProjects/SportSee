@@ -55,6 +55,7 @@ export default function AverageSessions({ user }: AverageSessionsProps) {
                     <Tooltip
                         content={renderTooltip}
                         cursor={<OverlayCursor />}
+                        isAnimationActive={false}
                     />
                     <Line
                         type="bumpX"
