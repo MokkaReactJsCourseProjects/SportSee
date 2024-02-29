@@ -6,6 +6,10 @@
     display: flex;
     border-radius: 5px;
     box-shadow: 0px 2px 4px 0px #00000005;
+
+    @media (max-width: 1280px) {
+        height: 248px;
+    }
 }
 
 .chart {
@@ -13,6 +17,7 @@
     border-radius: 999px;
     box-shadow: 0px 2px 4px 0px #00000005;
     margin: auto;
+
     svg {
         overflow: visible;
     }
@@ -24,6 +29,11 @@
     left: 30px;
     font-size: 15px;
     font-weight: 500;
+
+    @media (max-width: 1280px) {
+        top: 15px;
+        left: 20px;
+    }
 }
 
 .statValue {
@@ -32,6 +42,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
     p {
         position: relative;
         top: 15px;
@@ -41,11 +52,18 @@
         font-weight: 500;
         font-size: 16px;
         color: var(--color-gray);
+
         em {
             font-weight: 700;
             font-size: 26px;
             font-style: normal;
             color: var(--color-dkgray);
+        }
+
+        @media (max-width: 1280px) {
+            top: 10px;
+            line-height: 22px;
+            font-size: 15px;
         }
     }
 }

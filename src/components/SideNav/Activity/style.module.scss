@@ -6,8 +6,17 @@
     justify-content: center;
     align-items: center;
     border-radius: 6px;
+
+    @media (max-width: 1280px) {
+        width: 52px;
+        height: 52px;
+    }
 }
 
 .icon {
     height: 32px;
+
+    @media (max-width: 1280px) {
+        height: 26px;
+    }
 }

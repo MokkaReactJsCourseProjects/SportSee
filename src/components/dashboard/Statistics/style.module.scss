@@ -3,19 +3,29 @@
     display: flex;
     justify-content: space-between;
     gap: 30px;
-    //border: 1px yellow solid;
+
+    @media (max-width: 1280px) {
+        gap: 20px;
+    }
 }
+
 .secondContainer {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 30px;
-    //border: 1px red solid;
+
+    @media (max-width: 1280px) {
+        gap: 20px;
+    }
 }
+
 .thirdContainer {
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 30px;
-    //border: 1px blue solid;
+
+    @media (max-width: 1280px) {
+        gap: 20px;
+    }
 }

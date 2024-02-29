@@ -11,6 +11,7 @@ import { User } from "../../../../types/user";
 import styles from "./style.module.scss";
 import getPerformanceValue from "../../../../utils/misc/getPerformanceValue";
 import KindTick from "./KindTick";
+import useWindow from "../../../../utils/hooks/useWindow";
 
 //Types
 interface PerformanceProps {
@@ -19,6 +20,7 @@ interface PerformanceProps {
 
 //Exports
 export default function Performance({ user }: PerformanceProps) {
+    const { windowWidth } = useWindow();
     const data = [
         {
             kind: "Intensité",
@@ -52,7 +54,13 @@ export default function Performance({ user }: PerformanceProps) {
                 <RadarChart
                     data={data}
                     innerRadius={"15%"}
-                    outerRadius={"100%"}
+                    outerRadius={
+                        windowWidth > 1280
+                            ? windowWidth > 1400
+                                ? "95%"
+                                : "90%"
+                            : "85%"
+                    }
                     margin={{ top: 42, right: 0, bottom: 42, left: 0 }}
                 >
                     <PolarGrid radialLines={false} stroke="#FFF" />

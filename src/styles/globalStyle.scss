@@ -43,6 +43,16 @@ main {
     margin-top: 91px;
     margin-left: 117px;
     padding: 68px 90px 68px 107px;
+
+    @media (max-width: 1400px) {
+        padding: 54px 42px 54px 54px;
+    }
+
+    @media (max-width: 1280px) {
+        margin-top: 72px;
+        margin-left: 80px;
+        padding: 48px 36px 48px 48px;
+    }
 }
 
 a {

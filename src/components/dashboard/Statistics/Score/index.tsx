@@ -2,6 +2,7 @@
 import { RadialBar, RadialBarChart } from "recharts";
 import { User } from "../../../../types/user";
 import styles from "./style.module.scss";
+import useWindow from "../../../../utils/hooks/useWindow";
 
 //Types
 interface ScoreProps {
@@ -10,6 +11,7 @@ interface ScoreProps {
 
 //Exports
 export default function Score({ user }: ScoreProps) {
+    const { windowWidth } = useWindow();
     const value = Math.ceil(user.todayScore * 100);
     const data = [
         {
@@ -27,8 +29,8 @@ export default function Score({ user }: ScoreProps) {
         <div className={styles.container}>
             <RadialBarChart
                 data={data}
-                width={170}
-                height={170}
+                width={windowWidth > 1280 ? 170 : 150}
+                height={windowWidth > 1280 ? 170 : 150}
                 startAngle={90}
                 endAngle={90 + 360}
                 barSize={10}
