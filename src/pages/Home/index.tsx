@@ -21,7 +21,6 @@ export default function HomePage() {
         };
         loadData();
     }, [id]);
-    console.log(user);
 
     return (
         <main>
