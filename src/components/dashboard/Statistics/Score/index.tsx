@@ -25,6 +25,7 @@ export default function Score({ user }: ScoreProps) {
             fill: "var(--color-primary)",
         },
     ];
+
     return (
         <div className={styles.container}>
             <RadialBarChart

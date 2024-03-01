@@ -18,6 +18,7 @@ export default function KindTick({
     textAnchor,
 }: KindTickProps) {
     const shift = index == 0 ? -10 : index == 3 ? 10 : 0;
+
     return (
         <g>
             <text

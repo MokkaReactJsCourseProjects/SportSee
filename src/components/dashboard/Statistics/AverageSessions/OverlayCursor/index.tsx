@@ -16,7 +16,6 @@ export default function OverlayCursor({
     if (!points || points.length === 0) {
         return null;
     }
-
     const x = points[0].x;
 
     return (
